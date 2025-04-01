@@ -17,6 +17,12 @@ body {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Add a subtle shadow to make the menu stand out */
 }
 
+/* Style the logo */
+#logo {
+    height: 40px; /* Set a fixed height for the logo */
+    margin-left: 20px; /* Add space between the logo and the left edge of the screen */
+}
+
 #menu li {
     display: inline-block; /* Display menu items in a horizontal line */
     padding: 10px 20px; /* Space out the items */
