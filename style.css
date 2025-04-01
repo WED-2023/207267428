@@ -1,0 +1,40 @@
+/* Reset any default margin and padding for the body */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Styling the menu container */
+#menu {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove default padding */
+    background-color: #333; /* Dark background for the menu */
+    position: fixed; /* Make the menu float on top */
+    top: 0;
+    width: 100%; /* Take full width of the page */
+    z-index: 1000; /* Ensure the menu stays on top of other elements */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Add a subtle shadow to make the menu stand out */
+}
+
+#menu li {
+    display: inline-block; /* Display menu items in a horizontal line */
+    padding: 10px 20px; /* Space out the items */
+}
+
+#menu li a {
+    color: white; /* Text color */
+    text-decoration: none; /* Remove underline */
+    font-size: 1.2em; /* Increase font size for better visibility */
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
+}
+
+#menu li a:hover {
+    background-color: #4CAF50; /* Green background on hover */
+    border-radius: 5px; /* Round the corners */
+}
+
+/* Optional: Add padding to the body to avoid the menu overlapping the page content */
+body {
+    padding-top: 60px; /* Adjust this value based on the height of your menu */
+}
