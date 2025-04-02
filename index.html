@@ -123,23 +123,23 @@
 </div>
 
 <script>
-// Show the contact form when the button is clicked
+// show the contact form when the button is clicked
 document.getElementById('contactButton').onclick = function() {
   document.getElementById('contactFormModal').style.display = 'block';
 }
 
-// Close the contact form
+// close the contact form
 function closeForm() {
   document.getElementById('contactFormModal').style.display = 'none';
 }
  
-// Insert smiley into the textarea
+// insert smiley into the textarea
 function insertSmiley(smiley) {
   var textarea = document.getElementById('messageBody');
   textarea.value += smiley;
 }
 
-// Send the message
+// send the message
 function sendMessage() {
   var email = document.getElementById('userEmail').value;
   var message = document.getElementById('messageBody').value;
