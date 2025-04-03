@@ -62,15 +62,37 @@
 
 
 <section id="like" class="section">
-<br/>
-<div id="fb-root"></div>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v22.0"></script>
-<h1 style="text-align: center; font-family: Arial, sans-serif; font-size: 2.5em; color: #4CAF50;">Give me a like</h1>
-<div style="text-align: center;" class="fb-like" data-href="https://wed-2023.github.io/207267428/" data-width="500" data-layout="button_count" data-action="like" data-size="large" data-share="false"></div>
-<br/>
-<br/>
-<br/>
+  <br/>
+  <h1 style="text-align: center; font-family: Arial, sans-serif; font-size: 2.5em; color: #4CAF50;">Give me a like</h1>
+  <div style="text-align: center;">
+    <button id="likeButton" onclick="incrementLike()" style="background-color: #1c1fc5; color: white; border: none; padding: 10px 20px; font-size: 1.5em; cursor: pointer; border-radius: 5px;">
+      👍 Like
+    </button>
+  </div>
+
+  <!-- Like Count -->
+  <div style="text-align: center; margin-top: 10px;">
+    <span id="likeCount" style="font-size: 1.5em;">0</span> Likes
+  </div>
+  
+  <br/><br/><br/>
 </section>
+
+<script>
+  // Initialize like count
+  let likeCount = 0;
+
+  // Function to increment the like count
+  function incrementLike() {
+    // Disable the button after the first click to prevent further clicks
+    const button = document.getElementById('likeButton');
+    button.disabled = true;
+
+    // Increment the like count and update the display
+    likeCount++;
+    document.getElementById('likeCount').textContent = likeCount;
+  }
+</script>
 
 <section id="qrcoder" class="section">
 <br/>
