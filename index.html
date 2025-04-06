@@ -125,59 +125,45 @@
 </section>
 
 <section id="contact" class="section">
-<h1 style="text-align: center; font-family: Arial, sans-serif; font-size: 2.5em; color: #4CAF50;">contact me</h1>
+  <h1 style="text-align: center; font-family: Arial, sans-serif; font-size: 2.5em; color: #4CAF50;">Contact Me</h1>
 
-<button id="contactButton">Contact me</button>
+  <button id="contactButton">Contact me</button>
 
-<div id="contactFormModal"> 
-<h2>Contact me</h2>
-<input type="email" id="userEmail" placeholder="Your Email" required>
-<textarea id="messageBody" placeholder="Type your message here..."></textarea>
-<div class="smiley-list">
-  <button onclick="insertSmiley('😊')">😊</button>
-  <button onclick="insertSmiley('😂')">😂</button>
-  <button onclick="insertSmiley('😎')">😎</button>
-  <button onclick="insertSmiley('😢')">😢</button>
-</div>
+  <div id="contactFormModal"> 
+    <h2>Contact Me</h2>
+    <form class="contact-form" action="https://formsubmit.co/omertop2000@gmail.com" method="POST">
+      <input type="email" name="email" id="userEmail" placeholder="Your Email" required>
+      <textarea name="message" id="messageBody" placeholder="Type your message here..." required></textarea>
 
-<button class="send-btn" onclick="sendMessage()">Send</button>
-<button class="close-btn" onclick="closeForm()">Close</button>
-</div>
+      <div class="smiley-list">
+        <button type="button" onclick="insertSmiley('😊')">😊</button>
+        <button type="button" onclick="insertSmiley('😂')">😂</button>
+        <button type="button" onclick="insertSmiley('😎')">😎</button>
+        <button type="button" onclick="insertSmiley('😢')">😢</button>
+      </div>
 
-<script>
-// show the contact form when the button is clicked
-document.getElementById('contactButton').onclick = function() {
-  document.getElementById('contactFormModal').style.display = 'block';
-}
+      <button type="submit" class="send-btn">Send</button>
+      <button type="button" class="close-btn" onclick="closeForm()">Close</button>
+    </form>
+  </div>
 
-// close the contact form
-function closeForm() {
-  document.getElementById('contactFormModal').style.display = 'none';
-}
- 
-// insert smiley into the textarea
-function insertSmiley(smiley) {
-  var textarea = document.getElementById('messageBody');
-  textarea.value += smiley;
-}
+  <script>
+    document.getElementById('contactButton').onclick = function() {
+      document.getElementById('contactFormModal').style.display = 'block';
+    }
 
-// send the message
-function sendMessage() {
-  var email = document.getElementById('userEmail').value;
-  var message = document.getElementById('messageBody').value;
-  
-  if (email && message) {
-      console.log("Message sent from: " + email);
-      console.log("Message: " + message); 
-      alert("Message Sent from: " + email + "\n" + message); // message being sent
-      closeForm();
-  } else {
-      alert("Please fill in both your email and message.");
-  }
-}
-</script>
-<br/>
-<br/>
+    function closeForm() {
+      document.getElementById('contactFormModal').style.display = 'none';
+    }
+
+    function insertSmiley(smiley) {
+      var textarea = document.getElementById('messageBody');
+      textarea.value += smiley;
+    }
+  </script>
+
+  <br />
+  <br />
 </section>
 
 
